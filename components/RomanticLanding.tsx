@@ -397,7 +397,6 @@ export default function RomanticLanding() {
               width={520}
               height={620}
               priority
-              sizes="(max-width: 640px) 270px, 360px"
               className="h-[340px] w-[270px] rounded-[1.5rem] object-cover sm:h-[440px] sm:w-[360px]"
             />
           </div>
