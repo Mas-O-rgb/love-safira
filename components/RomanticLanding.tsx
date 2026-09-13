@@ -486,71 +486,6 @@ export default function RomanticLanding() {
         <p className="mt-5 text-sm text-[#aa8b9d]">Biar lebih asik bacanya sambil denger lagu piw,ada beberapa lagu tapi gak banyak sih tombol nya ada di pojok kanan bawah ya.</p>
       </section>
       {/* Header */}
-      
-      {/* Galeri Foto */}
-      <section className="relative z-10 mx-auto max-w-6xl px-6 mb-20">
-        <div className="mb-11 text-center">
-          <p className="text-sm font-bold tracking-[0.2em] text-[#c887a8]">OUR LITTLE MEMORIES</p>
-          <h2 className="mt-3 font-serif text-4xl font-bold text-[#8d5e7a] sm:text-5xl">Cerita kecil kita</h2>
-          <p className="mx-auto mt-4 max-w-lg leading-7 text-[#765f73]">Beberapa cerita kecil yang bakal disimpen sampai larut2 hari dikemudian hari. Masih banyak cerita yang belum dimasukin kesini</p>
-          <p className="text-sm font-bold tracking-[0.2em] text-[#c887a8]">Setiap foto ada ceritanya, gua ngarang sedikit, jadi kalo ga cape dibaca semua ya hehehe makasihh.</p>
-        </div>
-
-        <div className="grid grid-cols-4 gap-4 sm:grid-cols-3 sm:gap-6">
-          {galleryImages.map((image, index) => (
-            <button
-              key={image.src}
-              type="button"
-              onClick={() => setSelectedPhoto(image)}
-              aria-label={`Buka foto: ${image.alt}`}
-              className={`group relative overflow-hidden rounded border-4 border-pink-300 bg-white shadow-md transition duration-300 hover:z-10 hover:scale-105 hover:rotate-12 hover:shadow-xl ${index % 2 === 0 ? "rotate-[-1deg]" : "rotate-[4deg]"}`}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={600}
-                height={800}
-                sizes="(max-width: 640px) 50vw, 33vw"
-                className="aspect-[3/4] w-full object-cover transition duration-500 group-hover:scale-110"
-              />
-              <span className="absolute inset-x-0 bottom-0 translate-y-full bg-[#8d5e7a]/70 px-3 py-2 text-center text-xs font-medium text-white backdrop-blur-sm transition duration-300 group-hover:translate-y-0">
-                Tap atau Klik untuk baca yahh ♡
-              </span>
-            </button>
-          ))}
-        </div>
-      </section>
-      {/* Galeri Foto */}
-
-      {/* Kartu Ucapan */}
-      <section className="relative z-10 px-6 pb-16 pt-8 text-center">
-        <div className="mx-auto max-w-2xl rounded-[2rem] bg-[#f1e5f4]/80 px-7 py-12 shadow-sm sm:px-14">
-          <p className="text-4xl" aria-hidden="true">🧸</p>
-          <h2 className="mt-4 font-serif text-3xl font-bold text-[#8d5e7a]">You are my favorite place.</h2>
-          <p className="mt-4 leading-7 text-[#765f73]">Terima kasih udah menjadi bagian dari hidup gua yang flat ini. Hari-hari gua jaddi lebih bewarna sejak pertama kali gua liat lu, kadang dibikin deg-degan, salting, kangen, sedih kaya permen nano-nano deh banyak rasanya hehehehee.. </p>
-          <br />
-          <p className="mt-4 leading-7 text-[#765f73]">Dan kamu adalah perempuan yang pengen aku kalahin dalam hal yang paling rajin buat pendidikan, kerja atau hal apapun itu :). <br /> ASELI SUMPAH NGGA BOHONG.</p>
-        </div>
-      </section>
-      {/* Kartu Ucapan */}
-
-      {/* Kartu Ucapan */}
-      <section className="relative z-10 px-6 pb-8 pt-8 text-center">
-        <div className="mx-auto max-w-2xl rounded-[2rem] bg-[#D4E5FF]/80 px-7 py-12 shadow-sm sm:px-14">
-          <div className="relative mx-auto grid max-w-2xl grid-cols-[1fr_auto_1fr] items-center justify-center gap-3 sm:gap-6">
-            <h2 className="mt-4 font-serif text-3xl font-semibold text-[#8d5e7a]">Bumi memiliki banyak orang hebat <p className="font-extrabold text-4xl text-pink-500">SAFIRA</p> salah satunya</h2>
-            
-            <Image 
-              src="/images/bumi1.png" 
-              alt="Foto Bumi" 
-              width={300}       // Sesuaikan dengan lebar asli/keinginan gambar Anda
-              height={200}      // Sesuaikan dengan tinggi asli/keinginan gambar Anda
-              className="rounded-lg object-cover" // Anda bisa menambahkan class Tailwind di sini
-            />
-          </div>
-        </div>
-      </section>
-      {/* Kartu Ucapan */}
 
       {/* Jarak Rumah Kita */}
       <section className="relative z-10 px-6 py-12 sm:py-16">
@@ -600,12 +535,88 @@ export default function RomanticLanding() {
             </div>
           </div>
 
+          <div className="distance-doll-scene mt-8">
+            <div className="doll-wrapper">
+              <span className="doll-face" aria-hidden="true">
+                🧸
+              </span>
+              <span className="doll-tear tear-one" aria-hidden="true">💧</span>
+              <span className="doll-tear tear-two" aria-hidden="true">💧</span>
+            </div>
+          </div>
+
           <p className="mt-9 font-serif text-lg italic text-[#a46d8b]">
             Jauh di mata, dekat di hati.
+            Tapi tenang piw, kalo kamu kangen tinggal liat gallery yg ada dibawah ini.
           </p>
         </div>
       </section>
       {/* Jarak Rumah Kita */}
+      
+      {/* Galeri Foto */}
+      <section className="relative z-10 mx-auto max-w-6xl px-6 mb-20">
+        <div className="mb-11 text-center">
+          <p className="text-sm font-bold tracking-[0.2em] text-[#c887a8]">OUR LITTLE MEMORIES</p>
+          <h2 className="mt-3 font-serif text-4xl font-bold text-[#8d5e7a] sm:text-5xl">Cerita kecil kita</h2>
+          <p className="mx-auto mt-4 max-w-lg leading-7 text-[#765f73]">Beberapa cerita kecil yang bakal disimpen sampai larut2 hari dikemudian hari. Masih banyak cerita yang belum dimasukin kesini</p>
+          <p className="text-sm font-bold tracking-[0.2em] text-[#c887a8]">Setiap foto ada ceritanya, gua ngarang sedikit, jadi kalo ga cape dibaca semua ya hehehe makasihh.</p>
+        </div>
+
+        <div className="grid grid-cols-4 gap-4 sm:grid-cols-3 sm:gap-6">
+          {galleryImages.map((image, index) => (
+            <button
+              key={image.src}
+              type="button"
+              onClick={() => setSelectedPhoto(image)}
+              aria-label={`Buka foto: ${image.alt}`}
+              className={`group relative overflow-hidden rounded border-4 border-pink-300 bg-white shadow-md transition duration-300 hover:z-10 hover:scale-105 hover:rotate-12 hover:shadow-xl ${index % 2 === 0 ? "rotate-[-1deg]" : "rotate-[4deg]"}`}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={600}
+                height={800}
+                sizes="(max-width: 640px) 50vw, 33vw"
+                className="aspect-[3/4] w-full object-cover transition duration-500 group-hover:scale-110"
+              />
+              <span className="absolute inset-x-0 bottom-0 translate-y-full bg-[#8d5e7a]/70 px-3 py-2 text-center text-xs font-medium text-white backdrop-blur-sm transition duration-300 group-hover:translate-y-0">
+                Tap atau Klik untuk baca yahh ♡
+              </span>
+            </button>
+          ))}
+        </div>
+      </section>
+      {/* Galeri Foto */}
+
+      {/* Kartu Ucapan */}
+      <section className="relative z-10 px-6 pb-16 pt-8 text-center">
+        <div className="mx-auto max-w-2xl rounded-[2rem] bg-[#f1e5f4]/80 px-7 py-12 shadow-sm sm:px-14">
+          <p className="text-4xl" aria-hidden="true">🧸</p>
+          <h2 className="mt-4 font-serif text-3xl font-bold text-[#8d5e7a]">YOU ARE A GREAT WOMAN</h2>
+          <p className="mt-4 leading-7 text-[#765f73]">Peluk hangat teruntuk wanita hebat yg bisa berdiri diatas kakinya sendiri, wanita yg selalu tersenyum pada dunia meskipunn luka dan tantangan hidupnya yang ga bisa aku rasakan. Setiap waktu, lelah dan capemu hanya diri sendiri yg meraasakan kamu hebat lebih dari siapapun! jangan lupa ngomong ke dirisendiri bahwa "aku bangga bisa berjalan sejauh ini", meski belum sebesar lautan seindah langit sore dan belum secerah matahari tapi setidaknya trimakasih melawan rasa takut dengan berani. </p>
+          <br />
+          <p className="mt-4 leading-7 text-[#765f73]">Dan kamu adalah perempuan yang pengen aku kalahin, aku lawan dalam hal yang paling rajin buat pendidikan, kerja atau hal apapun itu :). <br /> ASELI SUMPAH NGGA BOHONG.</p>
+        </div>
+      </section>
+      {/* Kartu Ucapan */}
+
+      {/* Kartu Ucapan */}
+      <section className="relative z-10 px-6 pb-8 pt-8 text-center">
+        <div className="mx-auto max-w-2xl rounded-[2rem] bg-[#D4E5FF]/80 px-7 py-12 shadow-sm sm:px-14">
+          <div className="relative mx-auto grid max-w-2xl grid-cols-[1fr_auto_1fr] items-center justify-center gap-3 sm:gap-6">
+            <h2 className="mt-4 font-serif text-3xl font-semibold text-[#8d5e7a]">Bumi memiliki banyak orang hebat <p className="font-extrabold text-4xl text-pink-500">SAFIRA</p> salah satunya</h2>
+            
+            <Image 
+              src="/images/bumi1.png" 
+              alt="Foto Bumi" 
+              width={300}       // Sesuaikan dengan lebar asli/keinginan gambar Anda
+              height={200}      // Sesuaikan dengan tinggi asli/keinginan gambar Anda
+              className="rounded-lg object-cover" // Anda bisa menambahkan class Tailwind di sini
+            />
+          </div>
+        </div>
+      </section>
+      {/* Kartu Ucapan */}
 
       {/* Penutup */}
       <section className="relative z-10 overflow-hidden px-6 pb-24 pt-10 text-center">
@@ -640,13 +651,13 @@ export default function RomanticLanding() {
           </h2>
 
           <p className="mt-6 text-center leading-8 text-[#765f73]">
-                Gua ngga pinter2 amat buat bikin kata-kata, tapi gua selalu ingin lu tahu satu hal kehadiranlu bikin hidup gua jauh lebih indah. Kalau pun kamu ngeliat gua keliatan cuek, ngga peduli sm lu, apalagi sampe ngiranya gua ke lu kaya cuma dimainin aja ya nggak lah gila gua udah kenal sama Ayah sama Mamah sama Ejang bahkan sama sodara lu yang begitu baik nyambut gua sampai kadang gua disemangatin slayaknya anak sendiri:), NGGAK yah sama sekali ngga NO NO NO gua cuma cowo yang insecure sama orang2 disekitar gua yang hidupnya kayanya lebih baik dri gua, dan gua tetep bakal berusaha mendapatkan menyakinkanlu apapun itu alasannya. Dan kalo lu butuh apa-apa lu masih bisa nyuruh buat gua buat lakuin apapun itu kalo lu malu atau ngga enak lu bisa nyruh lewat Ejang atau Mamah ya.
+                Gua ngga pinter2 bngt buat bikin kata-kata, tapi gua ingin lu tahu satu hal kehadiranlu bikin hidup gua jauh lebih indah . Kalau pun kamu ngeliat gua keliatan cuek, ngga peduli sm lu, apalagi sampe ngiranya gua ke lu kaya cuma dimainin aja ya nggak lah gila gua udah kenal sama Ayah sama Mamah sama Ejang bahkan sama sodara lu yang begitu baik nyambut gua sampai kadang gua disemangatin slayaknya anak sendiri:), NGGAK yah sama sekali ngga NO NO NO gua cuma cowo yang insecure sama orang2 disekitar gua yang hidupnya kayanya lebih baik dri gua, dan gua tetep bakal berusaha mendapatkan menyakinkanlu apapun itu alasannya. Dan kalo lu butuh apa-apa lu masih bisa nyuruh buat gua buat lakuin apapun itu kalo lu malu atau ngga enak lu bisa nyruh lewat Ejang atau Mamah ya.
                 <br />
                 Aku sayang sama kamu, hari ini, besok, dan seterusnya. ♡
                 <br /> 
                 Walaupun gua buat ini kayanya masih ga mempang buat lu bahkan sekarang mungkin lu udh kecewa, jijik, ilfil sama gua hehehe.
                 <br />
-                Terimakasih udah buat hidup gua bewarna:)
+                Terima kasih udah menjadi bagian dari hidup gua yang flat ini. Hari-hari gua jaddi lebih bewarna sejak pertama kali gua liat lu, kadang dibikin deg-degan, salting, kangen, sedih kaya permen nano-nano deh banyak rasanya hehehehee..
               </p>
 
           <div className="mt-8 flex justify-center gap-2 text-3xl">
@@ -660,7 +671,7 @@ export default function RomanticLanding() {
           </div>
 
           <a href="/page1" className="mt-4 inline-flex rounded-full bg-[#8d5e7a] px-7 py-4 font-bold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#ae6e91]">
-            Nyanyi yuk!
+            Coba klik
           </a>
         </div>
       </section>
