@@ -125,3 +125,32 @@ button {
       rotate(360deg);
   }
 }
+
+.flower-touch-burst {
+  position: fixed;
+  z-index: 99;
+  display: inline-block;
+  font-size: 28px;
+  transform: translate(-50%, -50%);
+  animation: touchFlowerPop 900ms ease-out forwards;
+  text-shadow: 0 0 12px rgba(255, 180, 210, 0.9);
+}
+
+@keyframes touchFlowerPop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--fly-x, 0px)),
+      calc(-50% - 80px)
+    ) scale(1.4) rotate(360deg);
+  }
+}

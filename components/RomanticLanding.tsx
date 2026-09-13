@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import type { CSSProperties, PointerEvent } from "react";
 
 type Song = {
   title: string;
@@ -283,6 +284,27 @@ export default function RomanticLanding() {
   const [selectedPhoto, setSelectedPhoto] = useState<(typeof galleryImages)[number] | null>(null);
   const [audioError, setAudioError] = useState("");
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [flowerBursts, setFlowerBursts] = useState<
+    Array<{ id: number; x: number; y: number; icon: string }>
+  >([]);  
+  const createFlowerBurst = (event: PointerEvent<HTMLElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const id = Date.now() + Math.round(Math.random() * 1000);
+    const icon = ["🌸", "🌷", "💮", "✿"][Math.floor(Math.random() * 4)];
+
+    const newBurst = { id, x, y, icon };
+
+    setFlowerBursts((current) => [...current, newBurst]);
+
+    window.setTimeout(() => {
+      setFlowerBursts((current) =>
+        current.filter((item) => item.id !== id)
+      );
+    }, 900);
+  };
 
   useEffect(() => {
     const closeWithEscape = (event: KeyboardEvent) => {
@@ -354,6 +376,25 @@ export default function RomanticLanding() {
         onError={() => setAudioError("File lagu tidak dapat ditemukan atau diputar.")}
       />
 
+      <div
+        className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+        {flowerBursts.map((flower) => (
+          <span
+            key={flower.id}
+            className="flower-touch-burst"
+            style={
+              {
+                left: `${flower.x}px`,
+                top: `${flower.y}px`,
+                "--fly-x": `${Math.round(-80 + Math.random() * 160)}px`,
+              } as CSSProperties
+            }
+          >
+            {flower.icon}
+          </span>
+        ))}
+      </div>
+
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
         {backgroundFlowers.map((flower) => (
           <span
@@ -384,7 +425,7 @@ export default function RomanticLanding() {
       </div>
 
       {/* Header */}
-      <section className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-20 text-center">
+      <section className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-20 text-center" onPointerDown={createFlowerBurst}>
         <p className="mb-5 rounded-full bg-white/70 px-5 py-2 text-xs font-bold tracking-[0.24em] text-[#af7699] shadow-sm sm:text-sm">
           MADE WITH ALL MY LOVE ♡
         </p>
