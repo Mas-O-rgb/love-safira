@@ -16,12 +16,12 @@ const galleryImages = [
     message: "Ini pertama kali kita ngomong, main piw tapi kaya aneh yaa masa pandangan pertama langsung judi jir.",
   },
   {
-    src: "/images/cover-1.jpg",
+    src: "/images/2.jpg",
     alt: "Panitia 17an",
     message: "Beuh, ini yang paling gua suka foto soalnya gua disini keren banget, tapi kalo di pikir2 Pa RT Ongi keren juga ya punya warga bidadari",
   },
   {
-    src: "/images/cover-2.jpg",
+    src: "/images/3.jpg",
     alt: "Jadi panitia katar RW",
     message: "Ini kita lagi jadi panitia Katar RW piw, trus disuruh gaya foto nya begitu TERJEBAK DI FRIENDZONE katanya mah wkwkwk",
   },
@@ -396,7 +396,6 @@ export default function RomanticLanding() {
               alt="Foto wanita tercantik di dunia"
               width={520}
               height={620}
-              priority
               className="h-[340px] w-[270px] rounded-[1.5rem] object-cover sm:h-[440px] sm:w-[360px]"
             />
           </div>
@@ -501,7 +500,7 @@ export default function RomanticLanding() {
             Gak kuat rasanya kalo aku berjauhan kaya gini piw. Ingin segera ketemu dan peluk kamu erat-erat. Tapi aku yakin, jarak ini cuma bikin kita makin sayang satu sama lain.
           </p>
 
-          <div className="relative mx-auto mt-10 grid max-w-2xl grid-cols-[1fr_auto_1fr] items-center justify-center gap-3 sm:gap-6">
+          <div className="relative mx-auto mt-10 grid max-w-2xl grid-rows-[1fr_auto_1fr] items-center justify-center gap-3 sm:gap-3">
             <div className="relative z-10 rounded-2xl bg-white/80 px-3 py-4 shadow-sm sm:px-6">
               <p className="text-3xl">📍</p>
               <p className="mt-2 text-xs font-bold tracking-wider text-[#b87d9d]">
