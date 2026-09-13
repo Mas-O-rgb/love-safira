@@ -222,7 +222,7 @@ const galleryImages = [
     message: "Beuh ini kado HandMade by MASO wkwkwkk, malu jir ga rapihh, tapi effortnya ngga main2 si, v2 coming soon wkwk",
   },
   {
-    src: "/images/43.JPEG",
+    src: "/images/43(1).jpg",
     alt: "Jalan2 malem berkedok nolongin ejang",
     message: "Awalnya kita gabut Malem takbiran lebaran Haji ga ngapa2in tadinya mau nnton film lewat zoom tapi zoom nya gabisa nampilin gambar, nah selang beberapa menit lu ngabarin kalo ejang motornya mogok gapake lama kita meluncur deh jemput ejang sambil jalan2 malem heheheh.",
   },
