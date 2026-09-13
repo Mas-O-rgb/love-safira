@@ -222,6 +222,11 @@ const galleryImages = [
   },
 ];
 
+const headerPhoto = {
+  src: "/images/cover-1.JPG",
+  alt: "Foto wanita tercantik di dunia",
+};
+
 const songs: Song[] = [
   { title: "A Thousand Years", artist: "Christina Perri", src: "/audio/Christina-Perri-A-Thousand-Years.mp3" },
   { title: "Who Knows", artist: "Daniel Caesar", src: "/audio/Daniel-Caesar-Who-Knows.mp3" },
@@ -392,8 +397,8 @@ export default function RomanticLanding() {
           <div className="absolute -inset-4 rounded-[2.5rem] bg-[#e7d3f0] blur-xl" />
           <div className="relative rotate-2 rounded-[2rem] border-8 border-white bg-white p-2 shadow-2xl transition duration-500 hover:rotate-0">
             <Image
-              src="/images/cover-1.JPG"
-              alt="Foto wanita tercantik di dunia"
+              src={headerPhoto.src}
+              alt={headerPhoto.alt}
               width={520}
               height={620}
               className="h-[340px] w-[270px] rounded-[1.5rem] object-cover sm:h-[440px] sm:w-[360px]"
