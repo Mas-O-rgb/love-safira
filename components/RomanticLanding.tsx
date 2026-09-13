@@ -221,6 +221,11 @@ const galleryImages = [
     alt: "Kado dari OKI RAMADHAN",
     message: "Beuh ini kado HandMade by MASO wkwkwkk, malu jir ga rapihh, tapi effortnya ngga main2 si, v2 coming soon wkwk",
   },
+  {
+    src: "/images/43.JPEG",
+    alt: "Jalan2 malem berkedok nolongin ejang",
+    message: "Awalnya kita gabut Malem takbiran lebaran Haji ga ngapa2in tadinya mau nnton film lewat zoom tapi zoom nya gabisa nampilin gambar, nah selang beberapa menit lu ngabarin kalo ejang motornya mogok gapake lama kita meluncur deh jemput ejang sambil jalan2 malem heheheh.",
+  },
 ];
 
 const songs: Song[] = [
@@ -391,6 +396,7 @@ export default function RomanticLanding() {
         ref={audioRef}
         src={selectedSong.src}
         preload="metadata"
+        autoPlay
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onEnded={playNextSong}
@@ -646,18 +652,22 @@ export default function RomanticLanding() {
             ONE LAST THING...
           </p>
 
-          <h2 className="mt-3 font-serif text-4xl font-bold text-[#8d5e7a] sm:text-5xl">
+          <h2 className="mt-3 text-4xl font-bold text-[#8d5e7a] sm:text-5xl">
             My Love, My Safira, My Everything
           </h2>
 
           <p className="mt-6 text-center leading-8 text-[#765f73]">
-                Gua ngga pinter2 bngt buat bikin kata-kata, tapi gua ingin lu tahu satu hal kehadiranlu bikin hidup gua jauh lebih indah . Kalau pun kamu ngeliat gua keliatan cuek, ngga peduli sm lu, apalagi sampe ngiranya gua ke lu kaya cuma dimainin aja ya nggak lah gila gua udah kenal sama Ayah sama Mamah sama Ejang bahkan sama sodara lu yang begitu baik nyambut gua sampai kadang gua disemangatin slayaknya anak sendiri:), NGGAK yah sama sekali ngga NO NO NO gua cuma cowo yang insecure sama orang2 disekitar gua yang hidupnya kayanya lebih baik dri gua, dan gua tetep bakal berusaha mendapatkan menyakinkanlu apapun itu alasannya. Dan kalo lu butuh apa-apa lu masih bisa nyuruh buat gua buat lakuin apapun itu kalo lu malu atau ngga enak lu bisa nyruh lewat Ejang atau Mamah ya.
+                Gua ngga pinter2 bngt buat bikin kata-kata, tapi gua ingin lu tahu satu hal kehadiranlu bikin hidup gua jauh lebih indah. Kalau pun kamu ngeliat gua keliatan cuek, ngga peduli sm lu, apalagi sampe ngiranya gua cuma buat main-mainin lu aja ya nggak lah gila kali gua udah kenal sama Ayah sama Mamah sama Ejang bahkan sama sodara lu yang begitu baik nyambut gua sampai kadang gua disemangatin slayaknya anak sendiri:), NGGAK yah sama sekali ngga NO NO NO gua cuma cowo yang insecure sama orang2 disekitar gua yang hidupnya kayanya lebih baik dri gua, dan gua tetep bakal berusaha mendapatkan menyakinkanlu apapun itu alasannya. Dan kalo lu butuh apa-apa lu masih bisa nyuruh buat gua buat lakuin apapun itu kalo lu malu atau ngga enak lu bisa nyruh lewat Ejang atau Mamah ya.
                 <br />
                 Aku sayang sama kamu, hari ini, besok, dan seterusnya. ♡
                 <br /> 
-                Walaupun gua buat ini kayanya masih ga mempang buat lu bahkan sekarang mungkin lu udh kecewa, jijik, ilfil sama gua hehehe.
+                Walaupun gua buat semua ini kayanya masih ga mempang buat lu bahkan sekarang mungkin lu udh kecewa, jijik, ilfil sama gua hehehe.
                 <br />
-                Terima kasih udah menjadi bagian dari hidup gua yang flat ini. Hari-hari gua jaddi lebih bewarna sejak pertama kali gua liat lu, kadang dibikin deg-degan, salting, kangen, sedih kaya permen nano-nano deh banyak rasanya hehehehee..
+                Terima kasih udah menjadi bagian dari hidup gua yang flat ini. Hari-hari gua jaddi lebih bewarna sejak pertama kali gua liat lu, kadang dibikin deg-degan, salting, kangen, sedih kaya permen nano-nano deh banyak rasanya.
+                <br />
+                Tenang.. abis ini gua ngga ganggu lu lagi, tapi gua brharap masih ada secercah harapan buat lu bisa balik lagi dan gua bakal ngeyakinin lu walaupun posisi gua masih bgini.
+                <br />
+                Maap ya kebanyakan yapping nya hehehehe..Makasiyyyy
               </p>
 
           <div className="mt-8 flex justify-center gap-2 text-3xl">
@@ -671,7 +681,7 @@ export default function RomanticLanding() {
           </div>
 
           <a href="/page1" className="mt-4 inline-flex rounded-full bg-[#8d5e7a] px-7 py-4 font-bold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#ae6e91]">
-            Coba klik
+            Coba deh klik
           </a>
         </div>
       </section>
