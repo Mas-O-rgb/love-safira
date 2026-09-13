@@ -392,7 +392,7 @@ export default function RomanticLanding() {
           <div className="absolute -inset-4 rounded-[2.5rem] bg-[#e7d3f0] blur-xl" />
           <div className="relative rotate-2 rounded-[2rem] border-8 border-white bg-white p-2 shadow-2xl transition duration-500 hover:rotate-0">
             <Image
-              src="/images/cover-1.JPG"
+              src="/images/cover-1.jpg"
               alt="Foto wanita tercantik di dunia"
               width={520}
               height={620}
