@@ -17,7 +17,7 @@ const galleryImages = [
     message: "Ini pertama kali kita ngomong, main piw tapi kaya aneh yaa masa pandangan pertama langsung judi jir.",
   },
   {
-    src: "/images/2(1).jpg",
+    src: "/images/2(1).JPG",
     alt: "Panitia 17an",
     message: "Beuh, ini yang paling gua suka foto soalnya gua disini keren banget, tapi kalo di pikir2 Pa RT Ongi keren juga ya punya warga bidadari",
   },
@@ -212,7 +212,7 @@ const galleryImages = [
     message: "Au ini kondangan yang keberapa jir",
   },
   {
-    src: "/images/41(1).jpg",
+    src: "/images/41(1).JPG",
     alt: "Ceritanya mau Candid",
     message: "Mau foto diem2 dia malah sadar kamera, gaasik lu piw👎🏻",
   },
@@ -293,7 +293,7 @@ export default function RomanticLanding() {
     const y = event.clientY;
 
     const id = Date.now() + Math.round(Math.random() * 1000);
-    const icon = ["🌸", "🌷", "💮", "✿"][Math.floor(Math.random() * 4)];
+    const icon = ["🌸", "❤️"][Math.floor(Math.random() * 4)];
     const driftX = Math.round(-80 + Math.random() * 160);
     const driftY = Math.round(-120 - Math.random() * 80);
 
@@ -367,7 +367,8 @@ export default function RomanticLanding() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#fff8f7] text-[#684b65]">
+    <main className="relative min-h-screen overflow-hidden bg-[#fff8f7] text-[#684b65]"onPointerDown={createFlowerBurst}
+        onPointerMove={createFlowerBurst}>
       <audio
         ref={audioRef}
         src={selectedSong.src}
@@ -432,8 +433,7 @@ export default function RomanticLanding() {
       {/* Header */}
       <section
         className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-20 text-center"
-        onPointerDown={createFlowerBurst}
-        onPointerMove={createFlowerBurst}
+        
       >
         <p className="mb-5 rounded-full bg-white/70 px-5 py-2 text-xs font-bold tracking-[0.24em] text-[#af7699] shadow-sm sm:text-sm">
           MADE WITH ALL MY LOVE ♡
