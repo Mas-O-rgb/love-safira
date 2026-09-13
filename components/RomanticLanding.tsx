@@ -275,15 +275,15 @@ const fallingItems = Array.from({ length: 24 }, (_, index) => ({
 }));
 
 const loveBurstFlowers = Array.from({ length: 24 }, (_, index) => {
-  const angle = (index / 24) * Math.PI * 2;
-  const distance = 90 + (index % 5) * 20;
+  const angle = (index / 15) * Math.PI * 2;
+  const distance = 200 + (index % 10) * 60;
 
   return {
     id: index,
     icon: ["🌸", "🌷", "💮", "✿"][index % 4],
     x: Math.cos(angle) * distance,
     y: Math.sin(angle) * distance,
-    delay: `${(index % 4) * 0.05}s`,
+    delay: `${(index % 4) * 0.15}s`,
   };
 });
 
@@ -412,7 +412,7 @@ export default function RomanticLanding() {
           <div className="absolute -inset-4 rounded-[2.5rem] bg-[#e7d3f0] blur-xl" />
           <div className="relative rotate-2 rounded-[2rem] border-8 border-white bg-white p-2 shadow-2xl transition duration-500 hover:rotate-0">
             <Image
-              src="/images/cover-2.JPG"
+              src="/images/cover-1.JPG"
               alt="Foto wanita tercantik di dunia"
               width={520}
               height={620}
