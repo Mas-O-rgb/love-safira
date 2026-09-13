@@ -224,11 +224,13 @@ const galleryImages = [
 ];
 
 const songs: Song[] = [
+  { title: "Alamak", artist: "Rizky Febian & Adrian Khalif", src: "/audio/Rizky-Febian&Adrian-Khalif-Alamak.mp3" },
+  { title: "The One That Got Away", artist: "Katy Perry", src: "/audio/Katy-Perry-The-One-That-Got-Away.mp3" },
   { title: "A Thousand Years", artist: "Christina Perri", src: "/audio/Christina-Perri-A-Thousand-Years.mp3" },
   { title: "Who Knows", artist: "Daniel Caesar", src: "/audio/Daniel-Caesar-Who-Knows.mp3" },
-  { title: "The One That Got Away", artist: "Katy Perry", src: "/audio/Katy-Perry-The-One-That-Got-Away.mp3" },
-  { title: "Alamak", artist: "Rizky Febian & Adrian Khalif", src: "/audio/Rizky-Febian&Adrian-Khalif-Alamak.mp3" },
   { title: "Maafkan", artist: "Slank", src: "/audio/Slank-Maafkan.mp3" },
+  { title: "Anugerah Terindah Yang Pernah Kumiliki", artist: "Sheila On 7", src: "/audio/Sheila-On-7-Anugerah-Terindah-Yang-Pernah-Kumiliki.mp3" },
+  { title: "Best Friend", artist: "Red Orange Country", src: "/audio/Rex-Orange-County-Best-Friend.mp3" },
 ];
 
 const backgroundFlowers = Array.from({ length: 30 }, (_, index) => ({
@@ -288,83 +290,99 @@ export default function RomanticLanding() {
     Array<{ id: number; x: number; y: number; icon: string; driftX: number; driftY: number }>
   >([]);
 
-  const createFlowerBurst = (event: PointerEvent<HTMLElement>) => {
-    const x = event.clientX;
-    const y = event.clientY;
+    const createFlowerBurst = (event: PointerEvent<HTMLElement>) => {
+      const x = event.clientX;
+      const y = event.clientY;
 
-    const id = Date.now() + Math.round(Math.random() * 1000);
-    const icon = ["🌸", "❤️"][Math.floor(Math.random() * 4)];
-    const driftX = Math.round(-80 + Math.random() * 160);
-    const driftY = Math.round(-120 - Math.random() * 80);
+      const id = Date.now() + Math.round(Math.random() * 1000);
+      const icon = ["🌸", "❤️"][Math.floor(Math.random() * 4)];
+      const driftX = Math.round(-80 + Math.random() * 160);
+      const driftY = Math.round(-120 - Math.random() * 80);
 
-    const newBurst = { id, x, y, icon, driftX, driftY };
+      const newBurst = { id, x, y, icon, driftX, driftY };
 
-    setFlowerBursts((current) => [...current, newBurst]);
+      setFlowerBursts((current) => [...current, newBurst]);
 
-    window.setTimeout(() => {
-      setFlowerBursts((current) =>
-        current.filter((item) => item.id !== id)
-      );
-    }, 900);
-  };
-
-  useEffect(() => {
-    const closeWithEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setIsLetterOpen(false);
-        setIsPlaylistOpen(false);
-        setSelectedPhoto(null);
-      }
+      window.setTimeout(() => {
+        setFlowerBursts((current) =>
+          current.filter((item) => item.id !== id)
+        );
+      }, 900);
     };
 
-    window.addEventListener("keydown", closeWithEscape);
-    return () => window.removeEventListener("keydown", closeWithEscape);
-  }, []);
+    useEffect(() => {
+      const closeWithEscape = (event: KeyboardEvent) => {
+        if (event.key === "Escape") {
+          setIsLetterOpen(false);
+          setIsPlaylistOpen(false);
+          setSelectedPhoto(null);
+        }
+      };
 
-  useEffect(() => {
-    document.body.style.overflow = isLetterOpen || selectedPhoto ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isLetterOpen, selectedPhoto]);
+      window.addEventListener("keydown", closeWithEscape);
+      return () => window.removeEventListener("keydown", closeWithEscape);
+    }, []);
 
-  const toggleMusic = async () => {
+    useEffect(() => {
+      document.body.style.overflow = isLetterOpen || selectedPhoto ? "hidden" : "";
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }, [isLetterOpen, selectedPhoto]);
+
+    useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    try {
-      if (audio.paused) {
-        await audio.play();
-      } else {
-        audio.pause();
-      }
-      setAudioError("");
-    } catch {
-      setAudioError("Lagu belum dapat diputar. Coba tekan tombol play sekali lagi.");
-    }
-  };
+    audio.volume = 0.8;
 
-  const changeSong = async (song: Song) => {
-    const audio = audioRef.current;
-    if (!audio) return;
+    audio.play().catch(() => {
+      setAudioError("Autoplay diblokir browser. Tekan tombol play.");
+    });
+    }, []);
 
-    const shouldPlay = !audio.paused;
-    audio.pause();
-    audio.src = song.src;
-    audio.load();
+    const toggleMusic = async () => {
+      const audio = audioRef.current;
+      if (!audio) return;
 
-    setSelectedSong(song);
-    setIsPlaylistOpen(false);
-    setAudioError("");
-
-    if (shouldPlay) {
       try {
-        await audio.play();
+        if (audio.paused) {
+          await audio.play();
+        } else {
+          audio.pause();
+        }
+        setAudioError("");
       } catch {
-        setAudioError("Lagu dipilih, tekan play untuk memulainya.");
+        setAudioError("Lagu belum dapat diputar. Coba tekan tombol play sekali lagi.");
       }
-    }
-  };
+    };
+
+    const changeSong = async (song: Song, shouldPlay = !audioRef.current?.paused) => {
+      const audio = audioRef.current;
+      if (!audio) return;
+
+      audio.pause();
+      audio.src = song.src;
+      audio.load();
+
+      setSelectedSong(song);
+      setIsPlaylistOpen(false);
+      setAudioError("");
+
+      if (shouldPlay) {
+        try {
+          await audio.play();
+        } catch {
+          setAudioError("Lagu dipilih, tekan play untuk memulainya.");
+        }
+      }
+    };
+
+    const playNextSong = async () => {
+      const currentIndex = songs.findIndex((song) => song.src === selectedSong.src);
+      const nextSong = songs[(currentIndex + 1) % songs.length];
+      await changeSong(nextSong, true);
+    };
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#fff8f7] text-[#684b65]"onPointerDown={createFlowerBurst}
@@ -372,17 +390,14 @@ export default function RomanticLanding() {
       <audio
         ref={audioRef}
         src={selectedSong.src}
-        loop
         preload="metadata"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
+        onEnded={playNextSong}
         onError={() => setAudioError("File lagu tidak dapat ditemukan atau diputar.")}
       />
 
-      <div
-        className="pointer-events-none fixed inset-0 z-50 overflow-hidden"
-        aria-hidden="true"
-      >
+      <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
         {flowerBursts.map((flower) => (
           <span
             key={flower.id}
@@ -459,7 +474,7 @@ export default function RomanticLanding() {
           <span className="block text-[#c887a8]">in the world...</span>
         </h1>
         <p className="mt-6 max-w-xl text-base leading-8 text-[#765f73] sm:text-lg">
-          Di antara semua hal indah yang pernah terjadi, kamu tetap menjadi favoritku. Terima kasih sudah membuat setiap hari terasa lebih hangat.
+          Di antara semua hal indah yang pernah terjadi, kamu tetap menjadi wanita favorit setelah Ibuku. Terima kasih udah buat setiap hari terasa lebih hangat.
         </p>
         <button
           type="button"
@@ -473,7 +488,7 @@ export default function RomanticLanding() {
       {/* Header */}
       
       {/* Galeri Foto */}
-      <section className="relative z-10 mx-auto max-w-6xl px-6 py-20">
+      <section className="relative z-10 mx-auto max-w-6xl px-6 mb-20">
         <div className="mb-11 text-center">
           <p className="text-sm font-bold tracking-[0.2em] text-[#c887a8]">OUR LITTLE MEMORIES</p>
           <h2 className="mt-3 font-serif text-4xl font-bold text-[#8d5e7a] sm:text-5xl">Cerita kecil kita</h2>
@@ -629,7 +644,7 @@ export default function RomanticLanding() {
                 <br />
                 Aku sayang sama kamu, hari ini, besok, dan seterusnya. ♡
                 <br /> 
-                Walaupun gua buat ini kayanya masih ga mempang buat lu bahkan sekarang mungkin lu udh jijik, ilfil ya sama gua hehehe.
+                Walaupun gua buat ini kayanya masih ga mempang buat lu bahkan sekarang mungkin lu udh kecewa, jijik, ilfil sama gua hehehe.
                 <br />
                 Terimakasih udah buat hidup gua bewarna:)
               </p>
@@ -644,8 +659,8 @@ export default function RomanticLanding() {
             </span>
           </div>
 
-          <a href="#top" className="mt-9 inline-flex rounded-full bg-[#c887a8] px-6 py-3 font-bold text-white shadow-md transition hover:-translate-y-1 hover:bg-[#ae6e91]">
-            Ulangi cerita kita ↑
+          <a href="/page1" className="mt-4 inline-flex rounded-full bg-[#8d5e7a] px-7 py-4 font-bold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#ae6e91]">
+            Nyanyi yuk!
           </a>
         </div>
       </section>
