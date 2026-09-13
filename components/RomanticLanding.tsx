@@ -12,233 +12,213 @@ type Song = {
 const galleryImages = [
   {
     src: "/images/1(1).jpg",
-    alt: "Momen manis bersama",
-    message: "Di setiap senyummu, aku selalu menemukan alasan baru untuk bersyukur. ♡",
+    alt: "Judi Date",
+    message: "Ini pertama kali kita ngomong, main piw tapi kaya aneh yaa masa pandangan pertama langsung judi jir.",
   },
   {
     src: "/images/2.jpg",
-    alt: "Kenangan jalan bersama",
-    message: "Tempatnya mungkin biasa saja, tapi bersamamu semuanya terasa istimewa.",
+    alt: "Panitia 17an",
+    message: "Beuh, ini yang paling gua suka foto soalnya gua disini keren banget, tapi kalo di pikir2 Pa RT Ongi keren juga ya punya warga bidadari",
   },
   {
     src: "/images/3.jpg",
-    alt: "Senyum favoritku",
-    message: "Senyum ini adalah salah satu hal paling indah yang pernah aku lihat.",
+    alt: "Jadi panitia katar RW",
+    message: "Ini kita lagi jadi panitia Katar RW piw, trus disuruh gaya foto nya begitu TERJEBAK DI FRIENDZONE katanya mah wkwkwk",
   },
   {
     src: "/images/4.jpg",
-    alt: "Hari yang bahagia",
-    message: "Semoga kita selalu punya alasan untuk tertawa bersama seperti ini.",
+    alt: "Dugem dulu bro",
+    message: "Ini setelah acara malam puncak tingkat RW",
   },
   {
     src: "/images/5.jpg",
-    alt: "Momen kecil yang berharga",
-    message: "Kenangan kecil bersama kamu selalu punya tempat besar di hatiku.",
+    alt: "Kasian",
+    message: "Anak Ilang 1",
   },
   {
     src: "/images/6.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "WKWKWK perdana banget nih kita ke villa abis acara 17an, foto ini pas kita mau berangkat ke villa, baru pertama kali ngerasain yang namanya villa tuh kaya apa, tidur dipuncak tuh kaya gimana, walau villa nya kureng sii",
   },
   {
     src: "/images/7.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Candid Tercantik",
+    message: "Ini gua juga suka foto nya, waktu itu yang fotoin si Indah",
   },
   {
     src: "/images/8.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "OTW Villa",
+    message: "ke villa naik si merah",
   },
   {
     src: "/images/9.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Kondangan date",
+    message: "Lu tau gak? Ini kondangan kita yang pertama kai wkwkwk",
   },
   {
     src: "/images/10.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Lampu merah date",
+    message: "Foto di lampu merah fatmawati, abis mam di warung aceh sm anak katar ehehe",
   },
   {
     src: "/images/11.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "Nah ini lu tau gak? ini pertama kalinya jadi tuknag ojek safira pas masih kerja sama si CINA hahaha",
   },
   {
     src: "/images/12.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Kangen cina ga?",
+    message: "Inget banget lu nunggu jam 8 biar pas masuk kantornya, biar gk ketemu si CINA lama2 hahaha",
   },
   {
     src: "/images/13.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Kondangan date lagi",
+    message: "Ini undangan ke 2 ya kalo gasalah ditempat tmn lu pasir putih",
   },
   {
     src: "/images/14.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Jadi Kuli",
+    message: "Iii lucuuu, ini kita lagi ngecet meja nya si indok malem2",
   },
   {
     src: "/images/15.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Ngedate ceritanya",
+    message: "Ini kita lagi ke blok M bareng Indah, Abil, Yara, Alvin. Ini gua pergi diem2 biar gaketauan sama anak2 katar yg lain hehehe.",
   },
   {
     src: "/images/16.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Nyariin gua biar gratis isi anginnya",
+    message: "kalo kata indah mah NAMBAH ANGIN DATE hahaha",
   },
   {
     src: "/images/17.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "Wleeee",
   },
   {
     src: "/images/18.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "MasyaAllah alim banget anak muda ini",
+    message: "ini seminggu sebelum puasa ya piw? apa sehari sebelum puasa, foto kita pertama kali pake baju muslim",
   },
   {
     src: "/images/19.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "Dikirimin pap lagi makan, ini lagi otw puncak nyusul keluarganya yang lagi liburan",
   },
   {
     src: "/images/20.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Mam EsKlim",
+    message: "Wkwkwk foto di mcdonald DTC sehabis lu ngasih kado ulang tahun gua hahaha lucu banget",
   },
   {
     src: "/images/21.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Dapet Kado",
+    message: "Nah ini hadiahnya, dikasih gift Photo, Surat cinta untuk Starla sama Baju deh",
   },
   {
     src: "/images/22.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Ngupil keluarnya bumi",
+    message: "lagi ngegombal ceritanya 'Aku mah cuma segini' eh pas di zoom angjayy Bumi coeg siapa yg ga meleleh digituin coba hahahhaha kirain Upil",
   },
   {
     src: "/images/23.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Matanya cantik banget",
+    message: "Dari matamu matamu, ku mulai jatuh cinta",
   },
   {
     src: "/images/24.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "Ututuyy kaya anak kecil",
   },
   {
     src: "/images/25.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "Anjay foto pake gelang GBK",
   },
   {
     src: "/images/26.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "Perdana nonton bola Indonesia lawan siapa yak? lupa hehehe, kayanya apa2 pertama kali sama lu doang deh njir",
   },
   {
     src: "/images/27.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Rugi si kalo ga poto di tribun",
+    message: "Di potoin Ejang pas mau pulang nonton bola",
   },
   {
     src: "/images/28.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Pantai date",
+    message: "Pertama kali kepantai gratis wkwkwk",
   },
   {
     src: "/images/29.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Pantai date",
+    message: "Gendong mulu heran",
   },
   {
     src: "/images/30.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Aduh kasian lagi",
+    message: "Anak Ilang 2",
   },
   {
     src: "/images/31.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Kondangan date",
+    message: "Foto kondangan yang ke berapa ya ini, soalnya lu ga jarang kirim foto kita sih di hp lu",
   },
   {
     src: "/images/32.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "Di potoin mas Zidan waktu di pantai",
   },
   {
     src: "/images/33.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Ngupil dulu ah",
+    message: "",
   },
   {
     src: "/images/34.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Bola Date",
+    message: "Nonto Bola bareng Indah sama Ken di pekansari",
   },
   {
     src: "/images/35.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "Lagi cetak buku cerita di margonda buat tugas kuliah sapiwra",
   },
   {
     src: "/images/36.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "BodyGuard nya sapiwra",
+    message: "Kurang aman gimana lagi coba Sapiwra punya Bodyguard 2 wkwkwkwk",
   },
   {
     src: "/images/37.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "",
+    message: "17an yang ke  2 kali tahun 2026",
   },
   {
     src: "/images/38.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Ngumpet",
+    message: "",
   },
   {
     src: "/images/39.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Madang",
+    message: "Abis anter jemput kerja, kuliah kelas malem eh ditraktir sapiwra makan soto di deket polsek cinere",
   },
   {
     src: "/images/40.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Kondangan date",
+    message: "Au ini kondangan yang keberapa jir",
   },
   {
     src: "/images/41.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Ceritanya mau Candid",
+    message: "Mau foto diem2 dia malah sadar kamera, gaasik lu piw👎🏻",
   },
   {
     src: "/images/42.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
-  },
-  {
-    src: "/images/43.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
-  },
-  {
-    src: "/images/44.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
-  },
-  {
-    src: "/images/45.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
-  },
-  {
-    src: "/images/46.jpg",
-    alt: "Kenangan yang ingin disimpan",
-    message: "Kalau bisa, aku ingin menyimpan hari-hari seperti ini lebih lama lagi.",
+    alt: "Kado dari OKI RAMADHAN",
+    message: "Beuh ini kado HandMade by MASO wkwkwkk, malu jir ga rapihh, tapi effortnya ngga main2 si, v2 coming soon wkwk",
   },
 ];
 
@@ -446,8 +426,9 @@ export default function RomanticLanding() {
       <section className="relative z-10 mx-auto max-w-6xl px-6 py-20">
         <div className="mb-11 text-center">
           <p className="text-sm font-bold tracking-[0.2em] text-[#c887a8]">OUR LITTLE MEMORIES</p>
-          <h2 className="mt-3 font-serif text-4xl font-bold text-[#8d5e7a] sm:text-5xl">Potongan bahagia kita ✨</h2>
-          <p className="mx-auto mt-4 max-w-lg leading-7 text-[#765f73]">Beberapa momen kecil yang selalu ingin aku simpan selamanya.</p>
+          <h2 className="mt-3 font-serif text-4xl font-bold text-[#8d5e7a] sm:text-5xl">Cerita kecil kita</h2>
+          <p className="mx-auto mt-4 max-w-lg leading-7 text-[#765f73]">Beberapa cerita kecil yang bakal disimpen sampai larut2 hari dikemudian hari. Masih banyak cerita yang belum dimasukin kesini</p>
+          <p className="text-sm font-bold tracking-[0.2em] text-[#c887a8]">Setiap foto ada ceritanya, gua ngarang sedikit, jadi kalo ga cape dibaca semua ya hehehe makasihh.</p>
         </div>
 
         <div className="grid grid-cols-4 gap-4 sm:grid-cols-3 sm:gap-6">
@@ -593,9 +574,15 @@ export default function RomanticLanding() {
             My Love, My Safira, My Everything
           </h2>
 
-          <p className="mx-auto mt-5 max-w-xl leading-8 text-[#765f73]">
-            Terima kasih sudah menjadi bagian paling lucu, paling hangat, dan paling indah dari cerita hidupku. 
-          </p>
+          <p className="mt-6 text-center leading-8 text-[#765f73]">
+                Gua ngga pinter2 amat buat bikin kata-kata, tapi gua selalu ingin lu tahu satu hal kehadiranlu bikin hidup gua jauh lebih indah. Kalau pun kamu ngeliat gua keliatan cuek, ngga peduli sm lu, apalagi sampe ngiranya gua ke lu kaya cuma dimainin aja ya nggak lah gila gua udah kenal sama Ayah sama Mamah sama Ejang bahkan sama sodara lu yang begitu baik nyambut gua sampai kadang gua disemangatin slayaknya anak sendiri:), NGGAK yah sama sekali ngga NO NO NO gua cuma cowo yang insecure sama orang2 disekitar gua yang hidupnya kayanya lebih baik dri gua, dan gua tetep bakal berusaha mendapatkan menyakinkanlu apapun itu alasannya. Dan kalo lu butuh apa-apa lu masih bisa nyuruh buat gua buat lakuin apapun itu kalo lu malu atau ngga enak lu bisa nyruh lewat Ejang atau Mamah ya.
+                <br />
+                Aku sayang sama kamu, hari ini, besok, dan seterusnya. ♡
+                <br /> 
+                Walaupun gua buat ini kayanya masih ga mempang buat lu bahkan sekarang mungkin lu udh jijik, ilfil ya sama gua hehehe.
+                <br />
+                Terimakasih udah buat hidup gua bewarna:)
+              </p>
 
           <div className="mt-8 flex justify-center gap-2 text-3xl">
             <span className="animate-bounce">💗</span>
@@ -729,15 +716,14 @@ export default function RomanticLanding() {
                 id="letter-title"
                 className="mt-3 font-serif text-3xl font-bold text-[#8d5e7a]"
               >
-                Untuk kamu, sayangku.
+                Buat safira, manusia favorit aku.
               </h2>
 
               <p className="mt-6 text-center leading-8 text-[#765f73]">
-                Aku ngga pinter buat bikin kata-kata, tapi aku selalu ingin kamu tahu satu hal kehadiranmu membuat hidupku jauh lebih indah. Terima kasih karena sudah menjadi rumah, tawa, dan kebahagiaan kecilku. 
+                Oy pasti kamu cape abis dari puncak.
                 <br />
-                Aku sayang sama kamu, hari ini, besok, dan seterusnya. ♡
-                <br /> 
-                Walaupun aku buat ini kayanya masih ga mempang buat kamu hehehe.
+                Sekalian aku bawain makanan tapi cuma kaya gitu adanya yah, semoga kamu suka ya piw. Maaf yak ini harganya ga seberapa.
+                <br />
               </p>
 
               <button
