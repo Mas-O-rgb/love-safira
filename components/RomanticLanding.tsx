@@ -16,7 +16,7 @@ const galleryImages = [
     message: "Ini pertama kali kita ngomong, main piw tapi kaya aneh yaa masa pandangan pertama langsung judi jir.",
   },
   {
-    src: "/images/2.jpg",
+    src: "/images/2(1).jpg",
     alt: "Panitia 17an",
     message: "Beuh, ini yang paling gua suka foto soalnya gua disini keren banget, tapi kalo di pikir2 Pa RT Ongi keren juga ya punya warga bidadari",
   },
@@ -211,7 +211,7 @@ const galleryImages = [
     message: "Au ini kondangan yang keberapa jir",
   },
   {
-    src: "/images/41.jpg",
+    src: "/images/41(1).jpg",
     alt: "Ceritanya mau Candid",
     message: "Mau foto diem2 dia malah sadar kamera, gaasik lu piw👎🏻",
   },
@@ -383,6 +383,7 @@ export default function RomanticLanding() {
         ))}
       </div>
 
+      {/* Header */}
       <section className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-20 text-center">
         <p className="mb-5 rounded-full bg-white/70 px-5 py-2 text-xs font-bold tracking-[0.24em] text-[#af7699] shadow-sm sm:text-sm">
           MADE WITH ALL MY LOVE ♡
@@ -419,6 +420,7 @@ export default function RomanticLanding() {
         </button>
         <p className="mt-5 text-sm text-[#aa8b9d]">Biar lebih asik bacanya sambil denger lagu piw,ada beberapa lagu tapi gak banyak sih tombol nya ada di pojok kanan bawah ya.</p>
       </section>
+      {/* Header */}
       
       {/* Galeri Foto */}
       <section className="relative z-10 mx-auto max-w-6xl px-6 py-20">
