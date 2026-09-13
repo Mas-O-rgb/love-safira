@@ -16,12 +16,12 @@ const galleryImages = [
     message: "Ini pertama kali kita ngomong, main piw tapi kaya aneh yaa masa pandangan pertama langsung judi jir.",
   },
   {
-    src: "/images/2.jpg",
+    src: "/images/cover-1.jpg",
     alt: "Panitia 17an",
     message: "Beuh, ini yang paling gua suka foto soalnya gua disini keren banget, tapi kalo di pikir2 Pa RT Ongi keren juga ya punya warga bidadari",
   },
   {
-    src: "/images/3.jpg",
+    src: "/images/cover-2.jpg",
     alt: "Jadi panitia katar RW",
     message: "Ini kita lagi jadi panitia Katar RW piw, trus disuruh gaya foto nya begitu TERJEBAK DI FRIENDZONE katanya mah wkwkwk",
   },

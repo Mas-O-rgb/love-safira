@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Untuk Kamu, Sayangku ♡",
+  title: "Love Safira",
   description: "A little corner of the internet made with love.",
 };
 
