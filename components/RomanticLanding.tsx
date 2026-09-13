@@ -285,17 +285,19 @@ export default function RomanticLanding() {
   const [audioError, setAudioError] = useState("");
   const audioRef = useRef<HTMLAudioElement>(null);
   const [flowerBursts, setFlowerBursts] = useState<
-    Array<{ id: number; x: number; y: number; icon: string }>
-  >([]);  
+    Array<{ id: number; x: number; y: number; icon: string; driftX: number; driftY: number }>
+  >([]);
+
   const createFlowerBurst = (event: PointerEvent<HTMLElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+    const x = event.clientX;
+    const y = event.clientY;
 
     const id = Date.now() + Math.round(Math.random() * 1000);
     const icon = ["🌸", "🌷", "💮", "✿"][Math.floor(Math.random() * 4)];
+    const driftX = Math.round(-80 + Math.random() * 160);
+    const driftY = Math.round(-120 - Math.random() * 80);
 
-    const newBurst = { id, x, y, icon };
+    const newBurst = { id, x, y, icon, driftX, driftY };
 
     setFlowerBursts((current) => [...current, newBurst]);
 
@@ -377,7 +379,9 @@ export default function RomanticLanding() {
       />
 
       <div
-        className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+        className="pointer-events-none fixed inset-0 z-50 overflow-hidden"
+        aria-hidden="true"
+      >
         {flowerBursts.map((flower) => (
           <span
             key={flower.id}
@@ -386,7 +390,8 @@ export default function RomanticLanding() {
               {
                 left: `${flower.x}px`,
                 top: `${flower.y}px`,
-                "--fly-x": `${Math.round(-80 + Math.random() * 160)}px`,
+                "--fly-x": `${flower.driftX}px`,
+                "--fly-y": `${flower.driftY}px`,
               } as CSSProperties
             }
           >
@@ -425,7 +430,11 @@ export default function RomanticLanding() {
       </div>
 
       {/* Header */}
-      <section className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-20 text-center" onPointerDown={createFlowerBurst}>
+      <section
+        className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-20 text-center"
+        onPointerDown={createFlowerBurst}
+        onPointerMove={createFlowerBurst}
+      >
         <p className="mb-5 rounded-full bg-white/70 px-5 py-2 text-xs font-bold tracking-[0.24em] text-[#af7699] shadow-sm sm:text-sm">
           MADE WITH ALL MY LOVE ♡
         </p>

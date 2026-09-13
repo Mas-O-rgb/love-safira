@@ -134,6 +134,7 @@ button {
   transform: translate(-50%, -50%);
   animation: touchFlowerPop 900ms ease-out forwards;
   text-shadow: 0 0 12px rgba(255, 180, 210, 0.9);
+  will-change: left, top, transform, opacity;
 }
 
 @keyframes touchFlowerPop {
@@ -150,7 +151,7 @@ button {
     opacity: 0;
     transform: translate(
       calc(-50% + var(--fly-x, 0px)),
-      calc(-50% - 80px)
+      calc(-50% + var(--fly-y, -80px))
     ) scale(1.4) rotate(360deg);
   }
 }
